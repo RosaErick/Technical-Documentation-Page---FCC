@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Techinical Documentation">
+<meta name="author" content="Erick Rosa">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+
+<title>Documentação de JavaScript</title>
+
+</head>
+<body>
+    <header>
+
+        </button>
+    <nav id="navbar" class="nav">
+        <header class="header">
+            <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png"/>Introdução ao JavaScript
+        </header>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav-link current" href="#introdução">Introdução</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Data_Types">Data Types</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Variáveis">Variáveis</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Operadores">Operadores</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Objetos">Objetos</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Arrays">Arrays</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Funções">Funções</a></li>
+          <li class="nav__item"><a class="nav-link" href="#Referências">Referências</a></li>
+        </ul>
+        </header>
+    </nav>
+<main id="main-doc"> 
+
+<section class="main-section" id="introdução"><header>Introdução</header><p><article>
+    JavaScript é uma linguagem dinâmica multiparadigma com tipos e operadores, objetos internos padrão e métodos. Sua sintaxe é baseada nas linguagens Java e C - muitas estruturas dessas linguagens também se aplicam ao JavaScript. JavaScript suporta programação orientada a objetos com protótipos de objetos, em vez de classes <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank">(veja mais sobre herança prototípica e classes ES2015)</a>. JavaScript também suporta programação funcional - por serem objetos, as funções podem ser armazenadas em variáveis ​​e passadas como qualquer outro objeto.</p> 
+    <p>Vamos começar examinando os fundamentos de construção de qualquer linguagem: A tipagem. JavaScript é uma linguagem de tipagem dinâmica. Isso significa que você não necessita declarar o tipo de uma variável antes de sua atribuição. O tipo será automaticamente determinado quando o programa for processado. Isso também significa que você pode reatribuir uma mesma variável com um tipo diferente. O JavaScript manipula valores, e todos esses valores pertencem a um tipo. Os tipos de dados no JavaScript são:</p>
+
+<ul class="list-types">
+    <li class="types-list">Number</li>
+    <li class="types-list">String</li>
+    <li class="types-list">Undefined</li>
+    <li class="types-list">BigInt</li>
+    <li class="types-list">Boolean</li>
+    <li class="types-list">Null</li>
+    <li class="types-list">Symbol</li>
+</ul>
+</article>
+</section>
+<section class="main-section" id="Data_Types"><header>Data Types</header> <article><h2>Valores Primitivos</h2> <p>Todos os tipos, com a exceção de objetos, definem valores imutáveis (valores que são incapazes de mudar). Por exemplo e diferentemente da linguagem C, Strings são imutáveis. Nós nos referimos a valores desse tipo como "valores primitivos".</p> 
+
+<h3>Number</h3><p>No JavaScript, Number é um tipo de dado numérico <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">no double-precision 64-bit floating point format (IEEE 754)</a>. Em outras linguagens de programação diferentes tipos numéricos podem existir, por exemplo: Integers (Inteiros), Floats (Pontos Flutuantes), Doubles (Dobros), ou Bignums.</p>
+
+<h3>String</h3><p>Em qualquer linguagem de programação, uma string é uma sequência de caracteres usados para representar texto
+
+    Em JavaScript, uma String é um dos valores primitivos e o objeto String é um wrapper em cima do tipo primitivo string.</p>
+
+<h3>Undefined</h3> <p>Um valor  primitive automaticamente atribuido para variaveis que foram recentemente declaradas ou para arguments formais para qual não existem argumentos atualmente.</p>
+
+<h3>BigInt</h3> <p> No JavaScript, BigInt é um tipo de dado numérico que representa inteiros no formato de precisão arbritrária. Em outras linguagens de programação existem tipos numéricos diferentes, como por exemplo: Integers, Floats, Doubles ou Bignums.</p>
+
+<h3>Boolean</h3> <p>Um booleano, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: verdadeiro ou falso. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.</p>
+
+<h3>Null</h3> <p>Em ciência da computação, um valor nulo representa uma referencia que aponta, geralmente de maneira intencional, para um objeto ou endereço de memória inválido ou inexistente. O significado do valor nulo varia entre as implementações das linguagens. </p>
+
+<h3>Symbol</h3> <p> Esse termo do glossário descreve tanto o tipo de dados chamado "symbol", quando a função/classe <code>"Symbol()"</code>, que entre outras coisas, cria instâncias do tipo de dados symbol.
+
+    O tipo de dados "symbol" é qualificado como um primitivo, onde valores desse tipo podem ser usados para fazer propriedades de objetos anônimos. Ele pode ser usado como chave de uma propriedade de objeto quando este tem a intenção de ser privada, para uso interno da classe ou do tipo do objeto em questão. Como exemplo, chaves do tipo symbol existem em vários objetos internos do JavaScript. Da mesma forma, pode-se construir classes que tenham membros privados usando essa técnica. O tipo de dados symbol é de propósito altamente especializado, o que o torna pouco versátil; uma instância de Symbol pode ser atribuída à um L-value, e pode ter sua identidade examinada, nada mais; nenhuma outra operação poderá ser aplicada, o que contrasta, por exemplo, com uma instância de Number para um inteiro cujo valor é 42, que por sua vez tem diversas operações para comparar, combinar com outros tipos de dados, etc.
+    
+    Um valor do tipo de dados "symbol" pode ser referenciado como um "valor symbol". Em JavaScript, um valor symbol é criado através da função Symbol(), que dinamicamente produz um valor único e anônimo. A única utilização sensata para para essa construção é armazená-la em uma variável que será utilizada como chave para uma propriedade de objeto cujo objetivo é torná-lo anônimo.
+    
+    O exemplo abaixo guarda um valor symbol em uma variável myPrivateMethod para usar como chave do objeto this:</p> <code class="codes">let myPrivateMethod = Symbol();
+        this[myPrivateMethod] = function() {...}; </code> 
+        <p>Quando um valor de um symbol é usado como o identificador em uma atribuição de propriedade, a propriedade (como o symbol) é anônima; e também é não-enumerável. Como a propriedade não é enumerável, ela não será mostrada como um membro na construção de loop <code>"for( ... in ...)"</code> e, como a propriedade é anônima, ela não será mostrada no array de resultados de <code>"Object.getOwnPropertyNames()"</code>. A propriedade pode ser acessada usando o symbol original que a criou ou iterando o array de resultados de <code>"Object.getOwnPropertySymbols()</code> ". No exemplo de código anterior, o acesso à propriedade será através do valor armazenado na variável <code>myPrivateMethod</code>. </p>
+    </article>
+</section>
+
+<section class="main-section" id="Variáveis"><header>Variáveis</header><article>
+<p>No JavaScript é possivel declarar variáveis através de 3 maneiras:</p>
+
+<ul class="list-variables">
+    <li class="variables-list">Var</li><p>
+        Declara uma variável, opcionalmente, inicializando-a com um valor.</p>
+    <li class="variables-list">Let</li> <p>Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.</p>
+    <li class="variables-list">Const</li> <p>Declara uma constante de escopo de bloco, apenas de leitura. </p>
+</ul>
+
+<p>Você usa variáveis como nomes simbólicos para os valores em sua aplicação. O nome das variáveis, chamados de identificadores, obedecem determinadas regras.
+
+    Um identificador JavaScript deve começar com uma letra, underline <code>(_)</code>, ou cifrão <code>($)</code>; os caracteres subsequentes podem também ser números (0-9). Devido JavaScript ser case-sensitive, letras incluem caracteres de "A" a "Z" (maiúsculos) e caracteres de "a" a "z" (minúsculos).
+    
+    Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as sequências de escape Unicode como caracteres e identificadores.
+    Alguns exemplos de nomes legais são <code>Numeros_visitas, temp99, e _nome.</code>
+
+
+
+
+</p>
+</article>
+</section> 
+
+<section class="main-section" id="Operadores"> <header>Operadores</header><article>
+<p>O JavaScript possui os tipos de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators">operadores</a> a seguir. Esta seção descreve os operadores e contém informações sobre precedência de operadores.</p>
+
+<ul class="op-list">
+    <li class="list-op">Operadores de atribuição</li>
+    <li class="list-op">Operadores de comparação</li>
+    <li class="list-op">Operadores aritméticos</li>
+    <li class="list-op">Operadores bit a bit</li>
+    <li class="list-op">Operadores lógicos</li>
+    <li class="list-op">Operadores de string</li>
+    <li class="list-op">Operador condicional (ternário)</li>
+    <li class="list-op">Operador vírgula</li>
+    <li class="list-op">Operadores unário</li>
+    <li class="list-op">Operadores relacionais</li>
+</ul>
+
+<p>O JavaScript possui tanto operadores binários quanto unários e um operador ternário, o operador condicional. Um operador binário exige dois operandos, um antes do operador e outro depois:</p>
+<code>operando1 operador operando2</code>
+<p>Por exemplo, <code>3+4</code>ou <code>x*y</code>.
+
+    Um operador unário exige um único operando, seja antes ou depois do operador:</p>
+    <code>operador operando</code>
+    <p>ou</p>
+    <code>operando operador
+    </code>
+</article> 
+</section>
+
+
+<section class="main-section" id="Objetos"><header>Objetos</header><article> <p>Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.</p> 
+
+
+<p>Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
+</p>
+<code>var pessoa = {};</code>
+<p>Se você inserir pessoa no seu console JS e pressionar o botão, deverá obter o seguinte resultado:</p>
+<code>[object Object]</code>
+<p>Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:</p>
+<code>var pessoa = {
+    nome: ['Bob', 'Smith'],
+    idade: 32,
+    sexo: 'masculino',
+    interesses: ['música', 'esquiar'],
+    bio: function() {
+      alert(this.nome[0] + ' ' + this.nome[1] + ' tem ' + this.idade + ' anos de idade. Ele gosta de ' + this.interesses[0] + ' e ' + this.interesses[1] + '.');
+    },
+    saudacao: function() {
+      alert('Oi! Eu sou ' + this.nome[0] + '.');
+    }
+  };
+  </code>
+
+  <p>Depois de salvar e atualizar, tente inserir alguns dos itens a seguir no console JavaScript no devtools do seu navegador:</p>
+  <code>pessoa.nome
+    pessoa.nome[0]
+    pessoa.idade
+    pessoa.interesses[1]
+    pessoa.bio()
+    pessoa.saudacao()</code>
+    <p>Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
+
+    </p>
+</article>
+</section>
+
+<section class="main-section" id="Arrays"><header>Arrays</header><article><p>Arrays são geralmente descritas como "lista de objetos"; elas são basicamente objetos que contem múltiplos valores armazenados em uma lista. Um objeto array pode ser armazenado em variáveis e ser tratado de forma muito similar a qualquer outro tipo de valor, a diferença está em podermos acessar cada valor dentro da lista individualmente, e fazer super úteis e eficientes coisas com a lista, como laço através da lista e fazer a mesma coisa para cada valor. Talvez nós pegamos uma série de produtos e seus preços armazenados em uma array, e nós queremos fazer um laço através de todos eles e mostrar em um recibo, enquanto somamos todos os preços e mostramos o preço total ao final.</p> 
+
+<p>Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.</p>
+
+<h3>Criando uma array</h3> <p>Arrays são contruídas de colchetes, os quais contém uma lista de itens separada por vírgulas. </p>
+<p>Vamos supor que queremos armazenar uma lista de compras em uma array — nós temos algo como o seguinte. Digite as linhas abaixo no seu console:</p>
+<code>var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    shopping;</code>
+    <p>Neste caso, cada item na array é uma string, mas tenha em mente que você pode armazenar qualquer item em uma array — string, número, objeto, outra variável, até outra array. Você pode também misturar e combinar tipos de itens — eles não têm que ser todos números, strings, etc. Tente isto:</p>
+<code>var sequence = [1, 1, 2, 3, 5, 8, 13];
+    var random = ['tree', 795, [0, 1, 2]];</code>
+</section>
+
+<section class="main-section" id="Funções"><header>Funções</header><p>Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.</p> </section>
+<h3>Definindo Funções</h3><p>A definição da função (também chamada de declaração de função) consiste no uso da palavra chave <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function (en-US)</a>, seguida por:</p>
+
+<ul class="func-list">
+    <li class="list-func">Nome da Função.</li>
+    <li class="list-func">Lista de argumentos para a função, entre parênteses e separados por vírgulas.</li>
+    <li class="list-func">Declarações JavaScript que definem a função, entre chaves { }.</li>
+</ul>
+<p>Por exemplo, o código a seguir define uma função simples chamada <code>square</code>:</p>
+<code>function square(numero) {
+    return numero * numero;
+  }</code>
+
+<p>A função <code>square</code> recebe um argumento chamado <code>numero</code>. A função consiste em uma instrução que indica para retornar o argumento da função (isto é, <code>numero</code>) multiplicado por si mesmo. A declaração return (en-US) especifica o valor retornado pela função.</p>
+
+<code>return numero * numero;</code>
+
+<p>Parâmetros primitivos (como um número) são passados para as funções por valor; o valor é passado para a função, mas se a função altera o valor do parâmetro, esta mudança não reflete globalmente ou na função chamada.</p>
+
+<p>Se você passar um objeto (ou seja, um  valor não primitivo (en-US), tal como Array ou um objeto definido por você) como um parâmetro e a função alterar as propriedades do objeto, essa mudança é visível fora da função, conforme mostrado no exemplo a seguir:</p>
+
+<code>function minhaFuncao(objeto) {
+    objeto.make = "Toyota";
+  }
+  
+  var meucarro = {make: "Honda", model: "Accord", year: 1998};
+  var x, y;
+  
+  x = meucarro.make;     // x recebe o valor "Honda"
+  
+  minhaFuncao(meucarro);
+  y = meucarro.make;     // y recebe o valor "Toyota"
+                      // (a propriedade make foi alterada pela função)
+   </code>
+
+</article>
+<section class="main-section" id="Referências"><header>Referências</header><p>Toda a documentação desta página é retirada do <a href="https://developer.mozilla.org">MDN.</a></p> </section>
+<div class=footer> <p> \Coded By <a href="https://github.com/RosaErick" target="_blank">Erick Rosa</a>\</p> </div>
+
+</main>
+
+
+</body>
+</html>
